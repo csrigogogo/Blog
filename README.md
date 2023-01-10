@@ -1,4 +1,4 @@
-## Blog
+## CriSri's blog -- 喜欢的话请点 star，想订阅点 watch
 
 使用[Docusaurus 2](https://docusaurus.io/) 搭建
 

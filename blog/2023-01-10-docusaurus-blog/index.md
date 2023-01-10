@@ -8,13 +8,12 @@ image: https://i.imgur.com/mErPwqL.png
 hide_table_of_contents: false
 ---
 
-本文主要描写此网站搭建起来的过程
+## 前言
+
+&nbsp&nbsp&nbsp&nbsp 本文主要描写此网站搭建起来的过
+使用软路由的时候 突发奇想想打造一个自己的静态文件站点 ,创建一套属于自己的写作流,更好的推动自己的写作
 
 <!--truncate-->
-
-使用软路由的时候 突发奇想想打造一个自己的静态文件站点 ,创建一套属于自己的写作流
-
-更好的推动自己的写作动力
 
 本网站采用 Docusaurus 搭建 , 所以先要学习一下其中的概念
 
@@ -55,6 +54,7 @@ blog 文件夹根据时间存放 零散知识点
   </div>
 </details>
 ```
+
 <details>
   <summary>点我！</summary>
   <div>
@@ -103,32 +103,32 @@ function HelloCodeTitle(props) {
 
 代码块的语法高亮配置
 
-采用默认 
+采用默认
 
 - light github 主题
 
 - dark Dracula 主题
 
-语法高亮使用 prismjs 实现 可以在配置文件配置支持的语法 
+语法高亮使用 prismjs 实现 可以在配置文件配置支持的语法
 
 :::
 
-## 告示 
+## 告示
 
 ```
 :::note
 
 Some **content** with _Markdown_ `syntax`. 看看[这个 `api`](#)。
 
-:::  
+:::
 
 ```
+
 import Tabs from '@theme/Tabs';
 
 import TabItem from '@theme/TabItem';
 
-
-:::caution  后面是各个类型(note | tip | info | caution | danger)
+:::caution 后面是各个类型(note | tip | info | caution | danger)
 
 Some **content** with _Markdown_ `syntax`. 看看[这个 `api`](#)。
 
@@ -139,11 +139,10 @@ Some **content** with _Markdown_ `syntax`. 看看[这个 `api`](#)。
   <TabItem value="orange" label="Orange">This is an orange 🍊</TabItem>
   <TabItem value="banana" label="Banana">This is a banana 🍌</TabItem>
 </Tabs>
-:::  
-
+:::
 
 ## 待补充
 
-git flow 推送自动push到各个主流媒体网站 (掘金, 知乎)
+git flow 推送自动 push 到各个主流媒体网站 (掘金, 知乎)
 
 ci/cd 自动部署 vercel

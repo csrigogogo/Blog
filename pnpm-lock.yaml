@@ -3,6 +3,7 @@ lockfileVersion: 5.4
 specifiers:
   '@docusaurus/core': 2.2.0
   '@docusaurus/module-type-aliases': 2.2.0
+  '@docusaurus/plugin-content-docs': ^2.2.0
   '@docusaurus/preset-classic': 2.2.0
   '@mdx-js/react': ^1.6.22
   '@tsconfig/docusaurus': ^1.0.5
@@ -15,6 +16,7 @@ specifiers:
 
 dependencies:
   '@docusaurus/core': registry.npmjs.org/@docusaurus/core/2.2.0_lhsnqlb35hvawm3f6bviuzo2eu
+  '@docusaurus/plugin-content-docs': registry.npmjs.org/@docusaurus/plugin-content-docs/2.2.0_lhsnqlb35hvawm3f6bviuzo2eu
   '@docusaurus/preset-classic': registry.npmjs.org/@docusaurus/preset-classic/2.2.0_lhsnqlb35hvawm3f6bviuzo2eu
   '@mdx-js/react': registry.npmjs.org/@mdx-js/react/1.6.22_react@17.0.2
   clsx: registry.npmjs.org/clsx/1.2.1
@@ -755,7 +757,7 @@ packages:
       '@babel/core': ^7.0.0-0
     dependencies:
       '@babel/core': registry.npmjs.org/@babel/core/7.12.9
-      '@babel/helper-plugin-utils': registry.npmjs.org/@babel/helper-plugin-utils/7.10.4
+      '@babel/helper-plugin-utils': registry.npmjs.org/@babel/helper-plugin-utils/7.20.2
       '@babel/plugin-syntax-object-rest-spread': registry.npmjs.org/@babel/plugin-syntax-object-rest-spread/7.8.3_@babel+core@7.12.9
       '@babel/plugin-transform-parameters': registry.npmjs.org/@babel/plugin-transform-parameters/7.20.7_@babel+core@7.12.9
     dev: false
