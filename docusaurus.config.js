@@ -71,20 +71,13 @@ const config = {
           },
           { to: "/blog", label: "Blog", position: "left" },
           {
-            type: "doc",
-            docId: "intro",
-            to: "/Docusaurus",
-            label: "Docusaurus",
-            position: "left",
-          },
-          {
-            href: "https://github.com/facebook/docusaurus",
+            href: "https://github.com/csrigogogo",
             label: "GitHub",
             position: "right",
           },
         ],
       },
-      //   footer: {
+    
       //     style: 'dark',
       //     links: [
       //       {
