@@ -8,6 +8,7 @@ specifiers:
   '@tsconfig/docusaurus': ^1.0.5
   clsx: ^1.2.1
   prism-react-renderer: ^1.3.5
+  raw-loader: ^4.0.2
   react: ^17.0.2
   react-dom: ^17.0.2
   typescript: ^4.7.4
@@ -18,6 +19,7 @@ dependencies:
   '@mdx-js/react': registry.npmjs.org/@mdx-js/react/1.6.22_react@17.0.2
   clsx: registry.npmjs.org/clsx/1.2.1
   prism-react-renderer: registry.npmjs.org/prism-react-renderer/1.3.5_react@17.0.2
+  raw-loader: registry.npmjs.org/raw-loader/4.0.2
   react: registry.npmjs.org/react/17.0.2
   react-dom: registry.npmjs.org/react-dom/17.0.2_react@17.0.2
 
@@ -8587,6 +8589,18 @@ packages:
       http-errors: registry.npmjs.org/http-errors/2.0.0
       iconv-lite: registry.npmjs.org/iconv-lite/0.4.24
       unpipe: registry.npmjs.org/unpipe/1.0.0
+    dev: false
+
+  registry.npmjs.org/raw-loader/4.0.2:
+    resolution: {integrity: sha512-ZnScIV3ag9A4wPX/ZayxL/jZH+euYb6FcUinPcgiQW0+UBtEv0O6Q3lGd3cqJ+GHH+rksEv3Pj99oxJ3u3VIKA==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/raw-loader/-/raw-loader-4.0.2.tgz}
+    name: raw-loader
+    version: 4.0.2
+    engines: {node: '>= 10.13.0'}
+    peerDependencies:
+      webpack: ^4.0.0 || ^5.0.0
+    dependencies:
+      loader-utils: registry.npmjs.org/loader-utils/2.0.4
+      schema-utils: registry.npmjs.org/schema-utils/3.1.1
     dev: false
 
   registry.npmjs.org/rc/1.2.8:
