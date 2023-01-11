@@ -6,7 +6,7 @@
     "docusaurus": "docusaurus",
     "start": "docusaurus start",
     "build": "docusaurus build",
-    "build:gh-pages": "cross-env BASE_URL=/blog docusaurus build",
+    "build:gh-pages": "cross-env BASE_URL=/Blog docusaurus build",
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",
     "clear": "docusaurus clear",
