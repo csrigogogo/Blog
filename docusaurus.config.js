@@ -101,12 +101,12 @@ const config = {
           src: "img/logo.svg",
         },
         items: [
-        //   {
-        //     type: "doc",
-        //     docId: "intro",
-        //     position: "left",
-        //     label: "Tutorial",
-        //   },
+          //   {
+          //     type: "doc",
+          //     docId: "intro",
+          //     position: "left",
+          //     label: "Tutorial",
+          //   },
           { to: "/blog", label: "Blog", position: "right" },
           {
             // to: "/tech",
@@ -172,6 +172,19 @@ const config = {
       //     copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
       //   },
       prism: {
+        magicComments: [
+          // 要记得复制默认的高亮类！
+          {
+            className: "theme-code-block-highlighted-line",
+            line: "highlight-next-line",
+            block: { start: "highlight-start", end: "highlight-end" },
+          },
+          {
+            className: "code-block-error-line",
+            line: "error",
+          },
+        ],
+
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
         additionalLanguages: [
