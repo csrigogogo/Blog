@@ -18,6 +18,7 @@ const config = {
   favicon: "img/favicon.ico",
   organizationName: "csrigogogo", // Usually your GitHub org/user name.
   projectName: "Blog", // Usually your repo name.
+  trailingSlash: false,
   i18n: {
     defaultLocale: "zh-Hans",
     locales: ["zh-Hans"],
