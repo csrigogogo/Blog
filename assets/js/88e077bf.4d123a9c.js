@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkcrisri_blog=self.webpackChunkcrisri_blog||[]).push([[4483],{3487:e=>{e.exports=JSON.parse('{"title":"111","description":"5 minutes to learn the most important Docusaurus concepts.","slug":"/category/111","permalink":"/Blog/network/category/111","navigation":{"next":{"title":"1","permalink":"/Blog/network/111/1"}}}')}}]);
