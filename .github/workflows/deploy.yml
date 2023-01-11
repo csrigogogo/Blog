@@ -8,11 +8,11 @@ on:
     # https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#on
 
 jobs:
-  permissions:
-    contents: write
   deploy:
     name: Deploy to GitHub Pages
     runs-on: ubuntu-latest
+    permissions: 
+      contents: write
     steps:
       - uses: actions/checkout@v3
       - name: Setup pnpm
