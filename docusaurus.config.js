@@ -108,7 +108,7 @@ const config = {
           },
           { to: "/blog", label: "Blog", position: "right" },
           {
-            to: "/tech",
+            // to: "/tech",
             label: "技术",
             position: "right",
             items: [
