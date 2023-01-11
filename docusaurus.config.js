@@ -29,14 +29,14 @@ const config = {
       "classic",
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
-        docs: {
-          //   path: "tag/network",
-          //   routeBasePath: "network",
-          sidebarPath: require.resolve("./sidebars.js"),
-          //   showLastUpdateAuthor: true,
-          //   showLastUpdateTime: true,
-          editUrl: "https://github.com/csrigogogo/Blog/blob/master",
-        },
+        // docs: {
+        //   //   path: "tag/network",
+        //   //   routeBasePath: "network",
+        //   sidebarPath: require.resolve("./sidebars.js"),
+        //   //   showLastUpdateAuthor: true,
+        //   //   showLastUpdateTime: true,
+        //   editUrl: "https://github.com/csrigogogo/Blog/blob/master",
+        // },
         blog: {
           showReadingTime: true,
           //   showLastUpdateAuthor: true,
@@ -101,12 +101,12 @@ const config = {
           src: "img/logo.svg",
         },
         items: [
-          {
-            type: "doc",
-            docId: "intro",
-            position: "left",
-            label: "Tutorial",
-          },
+        //   {
+        //     type: "doc",
+        //     docId: "intro",
+        //     position: "left",
+        //     label: "Tutorial",
+        //   },
           { to: "/blog", label: "Blog", position: "right" },
           {
             // to: "/tech",
