@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkcrisri_blog=self.webpackChunkcrisri_blog||[]).push([[715],{8501:s=>{s.exports=JSON.parse('[{"label":"\u535a\u5ba2","permalink":"/Blog/blog/tags/\u535a\u5ba2","count":1}]')}}]);

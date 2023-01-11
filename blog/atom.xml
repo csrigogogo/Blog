@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://your-docusaurus-test-site.com/blog/blog</id>
+    <id>https://your-docusaurus-test-site.com/Blog/blog</id>
     <title>CriSri 的 Blog Blog</title>
     <updated>2023-01-10T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="https://your-docusaurus-test-site.com/blog/blog"/>
+    <link rel="alternate" href="https://your-docusaurus-test-site.com/Blog/blog"/>
     <subtitle>CriSri 的 Blog Blog</subtitle>
-    <icon>https://your-docusaurus-test-site.com/blog/img/favicon.ico</icon>
+    <icon>https://your-docusaurus-test-site.com/Blog/img/favicon.ico</icon>
     <entry>
         <title type="html"><![CDATA[博客搭建过程]]></title>
         <id>/2023/01/10/docusaurus-blog</id>
-        <link href="https://your-docusaurus-test-site.com/blog/blog/2023/01/10/docusaurus-blog"/>
+        <link href="https://your-docusaurus-test-site.com/Blog/blog/2023/01/10/docusaurus-blog"/>
         <updated>2023-01-10T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[记录一下本博客搭建的过程]]></summary>
         <content type="html"><![CDATA[<h2 class="anchor anchorWithHideOnScrollNavbar_xgYg" id="前言">前言<a class="hash-link" href="#前言" title="标题的直接链接">​</a></h2><p>&nbsp;<!-- -->&nbsp;<!-- -->&nbsp;<!-- -->&nbsp;<!-- --> 本文主要描写此网站搭建起来的过
