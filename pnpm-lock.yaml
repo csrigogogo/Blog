@@ -8,6 +8,7 @@ specifiers:
   '@mdx-js/react': ^1.6.22
   '@tsconfig/docusaurus': ^1.0.5
   clsx: ^1.2.1
+  cross-env: ^7.0.3
   prism-react-renderer: ^1.3.5
   raw-loader: ^4.0.2
   react: ^17.0.2
@@ -20,6 +21,7 @@ dependencies:
   '@docusaurus/preset-classic': registry.npmjs.org/@docusaurus/preset-classic/2.2.0_lhsnqlb35hvawm3f6bviuzo2eu
   '@mdx-js/react': registry.npmjs.org/@mdx-js/react/1.6.22_react@17.0.2
   clsx: registry.npmjs.org/clsx/1.2.1
+  cross-env: registry.npmjs.org/cross-env/7.0.3
   prism-react-renderer: registry.npmjs.org/prism-react-renderer/1.3.5_react@17.0.2
   raw-loader: registry.npmjs.org/raw-loader/4.0.2
   react: registry.npmjs.org/react/17.0.2
@@ -4807,6 +4809,16 @@ packages:
       parse-json: registry.npmjs.org/parse-json/5.2.0
       path-type: registry.npmjs.org/path-type/4.0.0
       yaml: registry.npmjs.org/yaml/1.10.2
+    dev: false
+
+  registry.npmjs.org/cross-env/7.0.3:
+    resolution: {integrity: sha512-+/HKd6EgcQCJGh2PSjZuUitQBQynKor4wrFbRg4DtAgS1aWO+gU52xpH7M9ScGgXSYmAVS9bIJ8EzuaGw0oNAw==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/cross-env/-/cross-env-7.0.3.tgz}
+    name: cross-env
+    version: 7.0.3
+    engines: {node: '>=10.14', npm: '>=6', yarn: '>=1'}
+    hasBin: true
+    dependencies:
+      cross-spawn: registry.npmjs.org/cross-spawn/7.0.3
     dev: false
 
   registry.npmjs.org/cross-fetch/3.1.5:

@@ -12,7 +12,7 @@ const config = {
   title: "CriSri 的 Blog",
   tagline: "Dinosaurs are cool",
   url: "https://your-docusaurus-test-site.com",
-  baseUrl: "/",
+  baseUrl: baseUrl,
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
   favicon: "img/favicon.ico",
