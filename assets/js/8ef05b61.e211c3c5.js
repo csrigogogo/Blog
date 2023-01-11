@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkcrisri_blog=self.webpackChunkcrisri_blog||[]).push([[7182],{8971:e=>{e.exports=JSON.parse('{"permalink":"/blog/tags/\u535a\u5ba2","page":1,"postsPerPage":10,"totalPages":1,"totalCount":1,"blogDescription":"Blog","blogTitle":"Blog"}')}}]);
