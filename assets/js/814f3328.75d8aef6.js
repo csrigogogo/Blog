@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkcrisri_blog=self.webpackChunkcrisri_blog||[]).push([[535],{5641:s=>{s.exports=JSON.parse('{"title":"Recent posts","items":[{"title":"\u5feb\u901f\u4e66\u5199\u535a\u5ba2","permalink":"/Blog/2023/01/10/docusaurus-blog"}]}')}}]);
