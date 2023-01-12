@@ -37,10 +37,10 @@ const config = {
         //   //   showLastUpdateTime: true,
         //   editUrl: "https://github.com/csrigogogo/Blog/blob/master",
         // },
+        docs: false,
         blog: {
+          routeBasePath: '/',
           showReadingTime: true,
-          //   showLastUpdateAuthor: true,
-          //   showLastUpdateTime: true,
           editUrl: "https://github.com/csrigogogo/Blog/blob/master",
         },
         theme: {
@@ -55,12 +55,12 @@ const config = {
       {
         id: "network",
         path: "tech/network",
-        routeBasePath: "network",
+        routeBasePath: "/network",
         sidebarPath: require.resolve("./sidebars.js"),
         editUrl: "https://github.com/csrigogogo/Blog/blob/master",
-        // showLastUpdateAuthor: true,
-        // showLastUpdateTime: true,
-        // breadcrumbs: false,
+        showLastUpdateAuthor: true,
+        showLastUpdateTime: true,
+        breadcrumbs: false,
       },
     ],
     [
@@ -68,12 +68,12 @@ const config = {
       {
         id: "soft-route",
         path: "tech/soft-route",
-        routeBasePath: "soft-route",
+        routeBasePath: "/soft-route",
         sidebarPath: require.resolve("./sidebars.js"),
         editUrl: "https://github.com/csrigogogo/Blog/blob/master",
-        // showLastUpdateAuthor: true,
-        // showLastUpdateTime: true,
-        // breadcrumbs: false,
+        showLastUpdateAuthor: true,
+        showLastUpdateTime: true,
+        breadcrumbs: false,
       },
     ],
     [
@@ -107,15 +107,15 @@ const config = {
           //     position: "left",
           //     label: "Tutorial",
           //   },
-          { to: "/blog", label: "Blog", position: "right" },
+          //   { to: "/blog", label: "Blog", position: "right" },
           {
-            // to: "/tech",
+            to: "tech",
             label: "技术",
             position: "right",
             items: [
-              { to: "/soft-route/概述", label: "软路由" },
-              { to: "/network/概述", label: "计算机网络" },
-              { to: "/react/概述", label: "react" },
+              { to: "/soft-route/home", label: "软路由" },
+              { to: "/network/home", label: "计算机网络" },
+              { to: "/react/home", label: "react" },
             ],
           },
           {
