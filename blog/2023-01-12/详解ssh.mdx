@@ -1,0 +1,63 @@
+---
+title: 详解ssh # dsadas
+description: ssh 协议
+# slug: welcome-docusaurus-v2
+authors: [crisri]
+tags: [ssh, git]
+image: https://i.imgur.com/mErPwqL.png
+hide_table_of_contents: false
+---
+
+## 前言
+
+ssh (Secure Shell Protocol) 协议 , 主要作用是在不安全的网络中为网络服务提供安全的传输环境.
+
+ssh 客户端 和 服务端通过协议构建的 secure Tunnel 进行传输
+
+常用于 远程登录系统, 利用 ssh 传输命令行页面 进行远程操控
+
+## 如何实现安全通信
+
+
+接下来会举一个例子来解释
+
+### 举例 : github ssh 认证
+
+使用 SSH 协议可以连接远程服务器和服务并向它们验证。 利用 SSH 密钥可以连接到 GitHub, 而无需在每次访问时都提供用户名和 personal access token。还可以使用 SSH 密钥对提交进行签名。
+
+通常步骤为
+
+1. 本地通过 [ssh-keygen](https://zh.wikipedia.org/zh-hk/Ssh-keygen) 生成 公钥私钥 (通常会存储在~/.ssh/**公钥名称\_rsa**.pub, ~/.ssh/**私钥名称\_rsa** )
+
+2. 登录 github.com 的网站 , 将生成的公钥提供给 github (私钥只在本地做加解密操作 , 绝对不会在网络中传输)
+
+3. 使用命令`ssh -T git@github.com` 测试 github 的连通性 如果设置成功, 这里可以获取到你的名字
+
+:::tip
+
+这里的 `ssh -T git@github.com` 测试的是 github http 的 ssh 连通性 ,
+
+下面的命令测试 https 的
+
+`ssh -T -p 443 git@ssh.github.com`
+
+---
+
+如果你挂了梯子的话,有可能会提示 `kex_exchange_identification: Connection closed by remote` , 此时需要配置 ssh 链接 github 主机的 22
+端口 改为 连接 github 主机 443 端口(https 的默认端口)
+
+具体参照[官方文档](https://docs.github.com/zh/authentication/troubleshooting-ssh/using-ssh-over-the-https-port#enabling-ssh-connections-over-https)
+
+:::
+
+结合上面对非对称加密的解释 , 来分析一下这个过程 ssh 是如何保证安全通信, 几个大前提需要提前知晓
+
+- 只要经过了网络通信, 即可认为是不安全的环境, 因为随时可能会有第三方进行劫持
+
+
+
+这个流程是 github 服务器认证本机的流程
+
+那本机如何对 github 服务器进行认证 并安全的传输 我们的认证信息 **logan**
+
+https = http + tls 
