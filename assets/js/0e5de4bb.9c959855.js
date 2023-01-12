@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkcrisri_blog=self.webpackChunkcrisri_blog||[]).push([[6031],{8601:s=>{s.exports=JSON.parse('{"name":"docusaurus-plugin-content-docs","id":"soft-route"}')}}]);

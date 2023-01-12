@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkcrisri_blog=self.webpackChunkcrisri_blog||[]).push([[8637],{6907:s=>{s.exports=JSON.parse('{"label":"esbuild","permalink":"/Blog/tags/esbuild","allTagsPath":"/Blog/tags","count":1}')}}]);
