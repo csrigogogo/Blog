@@ -39,7 +39,7 @@ const config = {
         // },
         docs: false,
         blog: {
-          routeBasePath: '/',
+          routeBasePath: "/",
           showReadingTime: true,
           editUrl: "https://github.com/csrigogogo/Blog/blob/master",
         },
@@ -97,27 +97,20 @@ const config = {
         title: "CriSri的 Blog",
         hideOnScroll: true,
         logo: {
-          alt: "My Site Logo",
+          alt: "CriSri的 Blog",
           src: "img/logo.svg",
         },
         items: [
           //   {
-          //     type: "doc",
-          //     docId: "intro",
-          //     position: "left",
-          //     label: "Tutorial",
+          //     to: "tech",
+          //     label: "技术",
+          //     position: "right",
+          //     items: [
+          //       { to: "/soft-route/home", label: "软路由" },
+          //       { to: "/network/home", label: "计算机网络" },
+          //       { to: "/react/home", label: "react" },
+          //     ],
           //   },
-          //   { to: "/blog", label: "Blog", position: "right" },
-          {
-            to: "tech",
-            label: "技术",
-            position: "right",
-            items: [
-              { to: "/soft-route/home", label: "软路由" },
-              { to: "/network/home", label: "计算机网络" },
-              { to: "/react/home", label: "react" },
-            ],
-          },
           {
             position: "right",
             className: "header-github-link",
@@ -127,50 +120,6 @@ const config = {
         ],
       },
 
-      //     style: 'dark',
-      //     links: [
-      //       {
-      //         title: 'Docs',
-      //         items: [
-      //           {
-      //             label: 'Tutorial',
-      //             to: '/docs/intro',
-      //           },
-      //         ],
-      //       },
-      //       {
-      //         title: 'Community',
-      //         items: [
-      //           {
-      //             label: 'Stack Overflow',
-      //             href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-      //           },
-      //           {
-      //             label: 'Discord',
-      //             href: 'https://discordapp.com/invite/docusaurus',
-      //           },
-      //           {
-      //             label: 'Twitter',
-      //             href: 'https://twitter.com/docusaurus',
-      //           },
-      //         ],
-      //       },
-      //       {
-      //         title: 'More',
-      //         items: [
-      //           {
-      //             label: 'Blog',
-      //             to: '/blog',
-      //           },
-      //           {
-      //             label: 'GitHub',
-      //             href: 'https://github.com/facebook/docusaurus',
-      //           },
-      //         ],
-      //       },
-      //     ],
-      //     copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
-      //   },
       prism: {
         magicComments: [
           // 要记得复制默认的高亮类！
@@ -192,10 +141,6 @@ const config = {
           "go",
           "json",
           "dart",
-          //   "ts",
-
-          //   "sh",
-          //   "python",
           "git",
           "nginx",
           "java",
