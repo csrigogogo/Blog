@@ -4,17 +4,53 @@
         <title>CriSri 的 Blog Blog</title>
         <link>https://your-docusaurus-test-site.com/Blog/</link>
         <description>CriSri 的 Blog Blog</description>
-        <lastBuildDate>Fri, 13 Jan 2023 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 17 Jan 2023 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>zh-Hans</language>
+        <item>
+            <title><![CDATA[typeScript]]></title>
+            <link>https://your-docusaurus-test-site.com/Blog/2023/01/17/typeScript</link>
+            <guid>/2023/01/17/typeScript</guid>
+            <pubDate>Tue, 17 Jan 2023 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[规则引擎]]></title>
+            <link>https://your-docusaurus-test-site.com/Blog/2023/01/17/规则引擎</link>
+            <guid>/2023/01/17/规则引擎</guid>
+            <pubDate>Tue, 17 Jan 2023 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[前端开发工程化之Docker环境]]></title>
+            <link>https://your-docusaurus-test-site.com/Blog/2023/01/16/前端开发工程化之Docker环境</link>
+            <guid>/2023/01/16/前端开发工程化之Docker环境</guid>
+            <pubDate>Mon, 16 Jan 2023 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[前端调试实践]]></title>
+            <link>https://your-docusaurus-test-site.com/Blog/2023/01/16/前端调试实践</link>
+            <guid>/2023/01/16/前端调试实践</guid>
+            <pubDate>Mon, 16 Jan 2023 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[nestjs 学习]]></title>
+            <link>https://your-docusaurus-test-site.com/Blog/2023/01/13/nestjs 学习</link>
+            <guid>/2023/01/13/nestjs 学习</guid>
+            <pubDate>Fri, 13 Jan 2023 00:00:00 GMT</pubDate>
+            <description><![CDATA[nestjs 学习]]></description>
+            <content:encoded><![CDATA[<h2 class="anchor anchorWithHideOnScrollNavbar_xgYg" id="前言">前言<a class="hash-link" href="#前言" title="标题的直接链接">​</a></h2><p>nestjs  全栈</p>]]></content:encoded>
+            <author>crifsri@icloud.com (crisri)</author>
+            <category>nestjs</category>
+            <category>全栈</category>
+            <category>full stack</category>
+        </item>
         <item>
             <title><![CDATA[sourceMap 原理]]></title>
             <link>https://your-docusaurus-test-site.com/Blog/2023/01/13/webpack的 sourcemap 原理</link>
             <guid>/2023/01/13/webpack的 sourcemap 原理</guid>
             <pubDate>Fri, 13 Jan 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[sourceMap 的原理]]></description>
-            <content:encoded><![CDATA[<p>dasdas</p>]]></content:encoded>
+            <content:encoded><![CDATA[<h2 class="anchor anchorWithHideOnScrollNavbar_xgYg" id="前言">前言<a class="hash-link" href="#前言" title="标题的直接链接">​</a></h2><p>sourceMap 按照字面意思其实就是源码映射的意思 , 可以认为它是一张 Map 表 , 记录着 源码 和 编译后的源码 的对应关系.</p><p>先看看 sourceMap 的应用</p>]]></content:encoded>
             <author>crifsri@icloud.com (crisri)</author>
             <category>sourceMap</category>
             <category>webpack</category>

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkcrisri_blog=self.webpackChunkcrisri_blog||[]).push([[512],{2155:s=>{s.exports=JSON.parse('{"label":"\u5168\u6808","permalink":"/Blog/tags/\u5168\u6808","allTagsPath":"/Blog/tags","count":1}')}}]);

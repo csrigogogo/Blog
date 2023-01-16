@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkcrisri_blog=self.webpackChunkcrisri_blog||[]).push([[5701],{1833:l=>{l.exports=JSON.parse('{"permalink":"/Blog/tags/full-stack","page":1,"postsPerPage":10,"totalPages":1,"totalCount":1,"blogDescription":"Blog","blogTitle":"Blog"}')}}]);
