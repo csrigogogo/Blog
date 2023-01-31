@@ -3,11 +3,187 @@ title: nestjs 学习 # dsadas
 description: nestjs 学习
 # slug: welcome-docusaurus-v2
 authors: [crisri]
-tags: [nestjs, 全栈 , full stack]
+tags: [nestjs, 全栈, full stack]
 image: https://i.imgur.com/mErPwqL.png
 hide_table_of_contents: false
 ---
 
 ## 前言
 
-nestjs  全栈
+nestjs 全栈
+
+阅读本文需要有一些基础认知
+
+restfulApi 规范 , mvc 模式 , react
+
+## 目的
+
+nestjs 实现 一个 todo 的 api 项目 ,可以登录获取当前用户信息 
+
+用户需要登录才能对 todoItem 进行 增删改行为
+
+需要对接口进行身份验证保护
+
+
+## 起步
+
+使用 nest-cli 脚手架 生成项目
+
+```bash
+pnpm dlx @nest/cli new nest_temp
+```
+
+快速生成资源
+
+```bash
+nest g resource xxx
+```
+
+## 版本
+
+这里说明使用的关键包的版本,
+
+## 概念
+
+- mvc 开发模式
+- 装饰器模式(decorators)
+- 依赖注入(DI depend inject)
+- 面向对象
+- dto ?
+- entities ?
+
+## mvc 开发模式
+
+mvc , 其实是由三个词组成 Model View Controller , 是一种常见的应用开发方式
+
+model 层 就是常见的业务建模,可以理解为数据, 可以带有逻辑，在数据变化时更新控制器。
+
+view 层 可以简单的理解为前端
+
+controller 层 控制数据流向 model 层 并且在数据变更时更新视图, 将视图 view 和模型 Model 解耦
+
+本文专注于 nestjs 的学习, 所以不对 view 层部分讲解, 前端使用 [TodoMVC 项目](https://github.com/tastejs/todomvc)
+
+下面简单了解 nestjs 里的关键概念
+
+### controllers 控制器
+
+负责 处理请求 以及 返回请求
+
+路由控制由哪个 controller 了处理 具体的请求 , 通常情况下 每个控制器 都对应多个路由
+
+不同的路由有不同的行为
+
+### [entities](https://typeorm.bootcss.com/entities)
+
+将模型标记为实体。 实体是一个转换为数据库表的类。
+typeORM 里的概念
+
+```
+@Entity("users")
+export class User {}
+```
+
+此代码将创建一个名为"users"的数据库表。
+
+你还可以指定一些其他实体选项：
+
+name - 表名。 如果未指定，则从实体类名生成表名。
+database - 所选 DB 服务器中的数据库名称。
+schema - 架构名称。
+engine - 在表创建期间设置的数据库引擎（仅在某些数据库中有效）。
+synchronize - 架构更新中跳过标有 false 的实体。
+skipSync - 标有此装饰器的实体将从架构更新中跳过。
+orderBy - 使用 find 操作和 QueryBuilder 指定实体的默认排序。
+
+### providers
+
+nestjs 世界的基础概念 `可以作为依赖被注入`
+The main idea of a provider is that it can be injected as a dependency; 
+
+### Modules
+
+@Modules 注解提供 metaData ,让 nestjs 组织起应用的结构
+每个应用至少有一个 Module , 一个 root Module
+
+The root module 是 nestjs构建应用图的起点 ,它内部的数据帮助 nestjs 来解析 module 并建立起依赖关系
+理论上一个 root module 也能撑起一个应用   , 这不是一个典型情况
+最佳实践是 使用module 作为 组织 components 的方式, 每个 module 都封装了一系列相关的功能
+
+@Module 有以下属性
+
+- providers  
+
+    这里提供的 providers 会被 nestjs注入器 实例化, 至少会在此模块中共享(如果其他模块引用了该模块, 也能共享)
+
+- imports
+
+    被引入的 modules 列表(提供了 providers 并且被此 module 引用了, 需要在这个字段中声明)
+
+- exports 
+
+    providers 的子集, 当其他模块引入此 module 时, 需要在这里提供其他模块可访问的 providers  
+
+- controllers 
+
+    这里需要提供在此 module 实例化的 controllers集合
+
+module 在 nest 中默认是单例模式 所以我们可以在不同的模块之间分享任何 provider 实例
+
+module 类也可以依赖注入, 但是 module类自身不能被注入因为 circular dependency
+
+```ts
+import { Module } from '@nestjs/common';
+import { CatsController } from './cats.controller';
+import { CatsService } from './cats.service';
+
+@Module({
+  controllers: [CatsController],
+  providers: [CatsService],
+})
+export class CatsModule {
+  constructor(private catsService: CatsService) {} // 这里注入了 CatsService 
+}
+```
+### guards
+
+A guard is a class annotated with the @Injectable() decorator, which implements the CanActivate interface.
+这个概念可以理解为守卫 , 其实就是一个 被 @Injectable 注解并且实现了 canActivate interface 的类
+
+https://docs.nestjs.com/assets/Guards_1.png
+
+它的作用是 运行时时请求 request 是否需要给到相应的路由处理器  (例如 权限  角色 等) , 通常会用于做权限认证
+
+
+## cookie session
+
+使用 passport 这个库 来实现 登录
+
+首先 @nestjs/passport passport @nestjs/jwt
+
+passport 策略包 使用这两个 passport-jwt passport-local
+
+登录的步骤
+
+- 未登录时访问接口 401  
+- 登录接口 输入用户密码 派发 jwt access token
+- 后续请求携带 token, 即为登陆成功
+
+### 策略模式
+
+https://refactoringguru.cn/design-patterns/strategy
+
+
+
+
+## 参考
+
+https://refactoringguru.cn/design-patterns/strategy
+
+https://juejin.cn/post/7083294481327325192#heading-6
+
+https://github.com/rbuckton/reflect-metadata
+
+https://zhuanlan.zhihu.com/p/417635345
+
+[passport.js 源码阅读](https://github.com/web3Liuwentong/Blog/issues/5)
