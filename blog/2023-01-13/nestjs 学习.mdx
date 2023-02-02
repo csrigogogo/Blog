@@ -18,12 +18,11 @@ restfulApi 规范 , mvc 模式 , react
 
 ## 目的
 
-nestjs 实现 一个 todo 的 api 项目 ,可以登录获取当前用户信息 
+nestjs 实现 一个 todo 的 api 项目 ,可以登录获取当前用户信息
 
 用户需要登录才能对 todoItem 进行 增删改行为
 
 需要对接口进行身份验证保护
-
 
 ## 起步
 
@@ -99,52 +98,53 @@ orderBy - 使用 find 操作和 QueryBuilder 指定实体的默认排序。
 ### providers
 
 nestjs 世界的基础概念 `可以作为依赖被注入`
-The main idea of a provider is that it can be injected as a dependency; 
+The main idea of a provider is that it can be injected as a dependency;
 
 ### Modules
 
 @Modules 注解提供 metaData ,让 nestjs 组织起应用的结构
 每个应用至少有一个 Module , 一个 root Module
 
-The root module 是 nestjs构建应用图的起点 ,它内部的数据帮助 nestjs 来解析 module 并建立起依赖关系
-理论上一个 root module 也能撑起一个应用   , 这不是一个典型情况
-最佳实践是 使用module 作为 组织 components 的方式, 每个 module 都封装了一系列相关的功能
+The root module 是 nestjs 构建应用图的起点 ,它内部的数据帮助 nestjs 来解析 module 并建立起依赖关系
+理论上一个 root module 也能撑起一个应用 , 这不是一个典型情况
+最佳实践是 使用 module 作为 组织 components 的方式, 每个 module 都封装了一系列相关的功能
 
 @Module 有以下属性
 
-- providers  
+- providers
 
-    这里提供的 providers 会被 nestjs注入器 实例化, 至少会在此模块中共享(如果其他模块引用了该模块, 也能共享)
+  这里提供的 providers 会被 nestjs 注入器 实例化, 至少会在此模块中共享(如果其他模块引用了该模块, 也能共享)
 
 - imports
 
-    被引入的 modules 列表(提供了 providers 并且被此 module 引用了, 需要在这个字段中声明)
+  被引入的 modules 列表(提供了 providers 并且被此 module 引用了, 需要在这个字段中声明)
 
-- exports 
+- exports
 
-    providers 的子集, 当其他模块引入此 module 时, 需要在这里提供其他模块可访问的 providers  
+  providers 的子集, 当其他模块引入此 module 时, 需要在这里提供其他模块可访问的 providers
 
-- controllers 
+- controllers
 
-    这里需要提供在此 module 实例化的 controllers集合
+  这里需要提供在此 module 实例化的 controllers 集合
 
 module 在 nest 中默认是单例模式 所以我们可以在不同的模块之间分享任何 provider 实例
 
-module 类也可以依赖注入, 但是 module类自身不能被注入因为 circular dependency
+module 类也可以依赖注入, 但是 module 类自身不能被注入因为 circular dependency
 
 ```ts
-import { Module } from '@nestjs/common';
-import { CatsController } from './cats.controller';
-import { CatsService } from './cats.service';
+import { Module } from "@nestjs/common";
+import { CatsController } from "./cats.controller";
+import { CatsService } from "./cats.service";
 
 @Module({
   controllers: [CatsController],
   providers: [CatsService],
 })
 export class CatsModule {
-  constructor(private catsService: CatsService) {} // 这里注入了 CatsService 
+  constructor(private catsService: CatsService) {} // 这里注入了 CatsService
 }
 ```
+
 ### guards
 
 A guard is a class annotated with the @Injectable() decorator, which implements the CanActivate interface.
@@ -152,8 +152,7 @@ A guard is a class annotated with the @Injectable() decorator, which implements 
 
 https://docs.nestjs.com/assets/Guards_1.png
 
-它的作用是 运行时时请求 request 是否需要给到相应的路由处理器  (例如 权限  角色 等) , 通常会用于做权限认证
-
+它的作用是 运行时时请求 request 是否需要给到相应的路由处理器 (例如 权限 角色 等) , 通常会用于做权限认证
 
 ## cookie session
 
@@ -163,9 +162,11 @@ https://docs.nestjs.com/assets/Guards_1.png
 
 passport 策略包 使用这两个 passport-jwt passport-local
 
+其次设置 express-session
+
 登录的步骤
 
-- 未登录时访问接口 401  
+- 未登录时访问接口 401
 - 登录接口 输入用户密码 派发 jwt access token
 - 后续请求携带 token, 即为登陆成功
 
@@ -173,8 +174,25 @@ passport 策略包 使用这两个 passport-jwt passport-local
 
 https://refactoringguru.cn/design-patterns/strategy
 
+## 前端部分
 
+以经典的 SPA 应用举例, 我们使用 [Vue 官方 Demo](https://cn.vuejs.org/examples/#todomvc) 在此基础上增加用户登录注册的能力, 然后在使用数据库管理不同用户的的数据
 
+spa 应用由静态的 html 为起点 构建应用, nestjs 提供了 [@nestjs/serve-static](https://docs.nestjs.com/recipes/serve-static#serve-static)来帮助我们 serve html
+import CodeBlock from '@theme/CodeBlock';
+
+<Tabs>
+  <TabItem value="apple" label="pnpm">
+    <CodeBlock language="bash">pnpm i @nestjs/serve-static</CodeBlock>
+  </TabItem>
+  <TabItem value="orange" label="yarn">
+        <CodeBlock language="bash">yarn add @nestjs/serve-static</CodeBlock>
+  </TabItem>
+  <TabItem value="banana" label="npm">
+        <CodeBlock language="bash">npm i @nestjs/serve-static</CodeBlock>
+
+  </TabItem>
+</Tabs>
 
 ## 参考
 
