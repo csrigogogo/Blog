@@ -179,7 +179,12 @@ https://refactoringguru.cn/design-patterns/strategy
 以经典的 SPA 应用举例, 我们使用 [Vue 官方 Demo](https://cn.vuejs.org/examples/#todomvc) 在此基础上增加用户登录注册的能力, 然后在使用数据库管理不同用户的的数据
 
 spa 应用由静态的 html 为起点 构建应用, nestjs 提供了 [@nestjs/serve-static](https://docs.nestjs.com/recipes/serve-static#serve-static)来帮助我们 serve html
+
 import CodeBlock from '@theme/CodeBlock';
+
+import Tabs from '@theme/Tabs';
+
+import TabItem from '@theme/TabItem';
 
 <Tabs>
   <TabItem value="apple" label="pnpm">
@@ -190,7 +195,6 @@ import CodeBlock from '@theme/CodeBlock';
   </TabItem>
   <TabItem value="banana" label="npm">
         <CodeBlock language="bash">npm i @nestjs/serve-static</CodeBlock>
-
   </TabItem>
 </Tabs>
 
